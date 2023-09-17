@@ -127,10 +127,11 @@ public class Main {
 
         ReadFileAndWriteFile r = new ReadFileAndWriteFile();
 
-            r.setPath("C:\\Users\\Kainzi\\Desktop\\ExamPrepare\\PrepareExam\\ProjectX\\src\\Test\\asd");
+            r.setPath("C:\\Users\\Kainzi\\Desktop\\ExamPrepare\\PrepareExam\\ProjectX\\src\\Test\\dsds");
+            r.readFile(false);
+            r.splitByDelimiter("e");
+            System.out.println(r.getWords());
 
-        System.out.println(Test.dere);
-        
 
 
 

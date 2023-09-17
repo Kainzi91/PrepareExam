@@ -5,10 +5,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Arrays;
+import java.util.List;
 
 public class ReadFileAndWriteFile {
     private String path;
     private String content;
+
+    private List<String> words;
 
     public ReadFileAndWriteFile() {
     }
@@ -106,6 +110,14 @@ public class ReadFileAndWriteFile {
 
     }
 
+    public void splitByDelimiter(String delimiter ) {
+
+        String[] wordArray = this.content.split(delimiter);
+        this.words = Arrays.asList(wordArray);
+    }
+
+
+
 
     private void setPathFileChooser() {
 
@@ -134,6 +146,9 @@ public class ReadFileAndWriteFile {
 
     public void setContent(String content) {
         this.content = content;
+    }
+    public List<String> getWords() {
+        return this.words;
     }
 
 
