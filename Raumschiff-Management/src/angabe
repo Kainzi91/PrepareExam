@@ -1,0 +1,26 @@
+Übungsprüfung: Weltraum-Expedition und Raumschiff-Management
+Aufgabe 1: Objektorientierte Programmierung (Unverändert)
+
+Implementieren Sie Klassen für Raumschiffe und deren Ausstattung.
+Jedes Raumschiff hat eine bestimmte Menge an Treibstoff und Schutzschilden.
+Jede Ausstattung hat einen Namen, einen Energieverbrauch und eine Effizienz, die als Produkt aus Energieverbrauch und Effizienz dargestellt wird.
+Es gibt verschiedene Arten von Ausstattungen: Waffen, Sensoren, Antriebe und Verteidigungssysteme.
+Aufgabe 2: Vereinfachte GUI-Entwicklung
+
+Erstellen Sie ein GUI mit einer oberen Menüleiste und einem zentralen Bereich, der die Raumschiffe in einer Liste darstellt.
+Unter der Liste sollte es Buttons für "Details anzeigen" und "Neues Raumschiff" geben.
+Wenn man auf "Details anzeigen" klickt, öffnet sich ein neues Fenster, das Details zum ausgewählten Raumschiff zeigt.
+Aufgabe 3: Erweiterte Menüleiste und Dateioperationen (Unverändert)
+
+Fügen Sie eine Menüleiste mit den Menüpunkten "Datei", "Bearbeiten" und "Hilfe" hinzu.
+Das Hilfe-Menü sollte Optionen für "Über" und "Nutzerhandbuch" haben.
+Das Datei-Menü sollte die Optionen "Neues Raumschiff", "Speichern unter..." und "Beenden" haben.
+Das Bearbeiten-Menü sollte Optionen für "Raumschiff konfigurieren" und "Ausstattung hinzufügen/entfernen" haben.
+Aufgabe 4: Datenstrukturen und Algorithmen
+
+Implementieren Sie eine Methode, die die verfügbaren Raumschiffe für eine Expedition berechnet.
+Ein Raumschiff kann nicht an mehreren Expeditionen gleichzeitig teilnehmen.
+Zusätzliche Anforderungen:
+
+Erstellen Sie Unit-Tests für Ihre Methoden.
+Erstellen Sie eine README-Datei, die den Aufbau und die Ausführung des Projekts erklärt.
