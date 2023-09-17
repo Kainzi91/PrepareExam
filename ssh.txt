@@ -10,9 +10,9 @@ kopieren
 
 github einfügen unter settings add new ssh
 
-git config --global user.name "John Doe" (github name)
+git config --global user.name "Kainzi91" (github name)
 
-git config --global user.email johndoe@example.com (github mail)
+git config --global user.email kainza2@yahoo.de (github mail)
 
 fertig
 
