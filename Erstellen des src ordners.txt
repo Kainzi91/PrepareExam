@@ -1,6 +1,0 @@
-Erstellen des src ordners:
-
-1) rechte wegnehmen von Projektordner falls notwendig
-2) Directory erstellen (src)
-3) Rechte mausklick auf src -> Mark Direktory as source route
-4) Main erstellen

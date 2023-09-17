@@ -1,0 +1,19 @@
+ssh-keygen -t ed25519 -C "your_email@example.com" (mail von github)
+
+3 mal enter
+
+in den ordner gehen .ssh
+
+cat id_rsa.pub
+
+kopieren
+
+github einfügen unter settings add new ssh
+
+git config --global user.name "John Doe" (github name)
+
+git config --global user.email johndoe@example.com (github mail)
+
+fertig
+
+git clone ......
