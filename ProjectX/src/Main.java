@@ -103,7 +103,7 @@ public class Main {
          * File System
          */
 
-        FileSystemGUI fileSystemGUI = new FileSystemGUI();
+       // FileSystemGUI fileSystemGUI = new FileSystemGUI();
 
 
         /**
@@ -124,26 +124,13 @@ public class Main {
         System.out.println(a.getContent());
 */
         //ReadFileAndWriteFile w = new ReadFileAndWriteFile("hallo meine freunde");
-        /*
+
         ReadFileAndWriteFile r = new ReadFileAndWriteFile();
-        r.setContent("dsdlsdlvlvmsdv");
-        r.setPath("src/Test/myTESTSDCDSC");
 
-        r.appendFile(r.getPath(), r.getContent());
+            r.setPath("C:\\Users\\Kainzi\\Desktop\\ExamPrepare\\PrepareExam\\ProjectX\\src\\Test\\asd");
+            r.readFile(true);
+        System.out.println(r.getContent());
 
-        r.copyChoosenFile();
 
-        ReadFileAndWriteFile myFile = new ReadFileAndWriteFile();
-
-        //myFile.copyChoosenFile();
-
-        myFile.setPath("src/Test/hhh");
-        myFile.setContent("UUUUUUUUUUUUUUUUUUUUUUUU");
-        myFile.appendFile(myFile.getPath(), myFile.getContent());
-
-        myFile.setChoosenPath();
-        System.out.println(myFile.getPath());
-
-         */
     }
 }
