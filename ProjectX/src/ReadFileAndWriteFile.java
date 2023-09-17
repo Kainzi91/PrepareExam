@@ -14,28 +14,6 @@ public class ReadFileAndWriteFile {
     }
 
 
-
-    private void writeFile(String path) {
-        try {
-            Files.write(Paths.get(path), this.content.getBytes(), StandardOpenOption.CREATE);
-        } catch (IOException e) {
-            System.out.println("Error writing file");
-        }
-    }
-
-    public void writeFile(){
-        if (this.path == null) {
-            System.out.println("Path is null. Cannot write to file.");
-            return;
-        }
-        try {
-            Files.write(Paths.get(path), this.content.getBytes(), StandardOpenOption.CREATE);
-        } catch (IOException e) {
-            System.out.println("Error writing file");
-        }
-    }
-
-
     public void readFile(boolean chooseFile){
         if (chooseFile) {
             setPathFileChooser();
@@ -100,7 +78,7 @@ public class ReadFileAndWriteFile {
 
 
 
-    public void overwriteFile (String data , boolean chooseFile) {
+    public void writeFile (String data , boolean chooseFile) {
 
         if (chooseFile) {
             setPathFileChooser();
@@ -123,12 +101,10 @@ public class ReadFileAndWriteFile {
 
     public void copyFile(boolean  choosePathOpen,boolean choosePathSave){
         readFile(choosePathOpen);
-        overwriteFile(this.content,choosePathSave);
+        writeFile(this.content,choosePathSave);
 
 
     }
-
-
 
 
     private void setPathFileChooser() {

@@ -40,9 +40,9 @@ public class FileSystemGUI extends JFrame{
                 if (selectedFile != null) {
                     if (evt.getClickCount() == 2 && selectedFile.isFile()) {
                         if (selectedFile.getName().endsWith(".java")) {
-                            DateiLesen dateiLesen = new DateiLesen(selectedFile.getPath());
-                            String fileContent = dateiLesen.getInhalt();
-                            inhaltGUI.setTextArea1(fileContent);
+                           // DateiLesen dateiLesen = new DateiLesen(selectedFile.getPath());
+                           // String fileContent = dateiLesen.getInhalt();
+                           // inhaltGUI.setTextArea1(fileContent);
                             inhaltGUI.setVis();
                             inhaltGUI.setMyTitle(selectedFile.getName());
                             inhaltGUI.setPos(getX() + getWidth() + 30, getY(), getWidth(), getHeight());

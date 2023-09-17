@@ -128,8 +128,10 @@ public class Main {
         ReadFileAndWriteFile r = new ReadFileAndWriteFile();
 
             r.setPath("C:\\Users\\Kainzi\\Desktop\\ExamPrepare\\PrepareExam\\ProjectX\\src\\Test\\asd");
-            r.readFile(true);
-        System.out.println(r.getContent());
+
+        System.out.println(Test.dere);
+        
+
 
 
     }

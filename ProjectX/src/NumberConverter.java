@@ -1,8 +1,6 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class NumberConverter {
 
@@ -11,9 +9,12 @@ public class NumberConverter {
     private String hexNumber;
     private String octalNumber;
     private String asciiRepresentation;
-    private List<String[]> allValues = new ArrayList<>();
 
-    private List<Object> otherAllValues = new ArrayList<>();
+    private List<Object> aktValues = new ArrayList<>();
+
+    private List<Object[]> history = new ArrayList<>();
+
+
 
     public NumberConverter() {
     }
@@ -41,8 +42,15 @@ public class NumberConverter {
             System.out.println(e.getMessage());
         }
 
-        this.saveAllValuesAsList();
-        this.saveAllValuesAsListToObject();
+        aktValues.clear(); // löschen Sie zuerst alle vorherigen Werte
+        aktValues.add(decimalNumber);
+        aktValues.add(binaryNumber);
+        aktValues.add(hexNumber);
+        aktValues.add(octalNumber);
+        aktValues.add(asciiRepresentation);
+
+        history.add(aktValues.toArray());
+
     }
 
     public void setBinaryNumber(String binaryNumber) {
@@ -76,6 +84,9 @@ public class NumberConverter {
     public int getDecimalNumber() {
         return decimalNumber;
     }
+    public Object[][] getHistory() {
+        return history.toArray(new Object[0][]);
+    }
 
     public String getBinaryNumber() {
         return binaryNumber;
@@ -97,45 +108,10 @@ public class NumberConverter {
      *
      * @Getter all
      */
-    public void saveAllValuesAsList() {
-        String[] values = new String[]{Integer.valueOf(decimalNumber).toString(), binaryNumber, hexNumber, octalNumber, asciiRepresentation};
-        allValues.add(values);
+    public Object[] getAktValues() {
+        return  aktValues.toArray();
     }
 
-    public void saveAllValuesAsListToObject() {
-        otherAllValues.clear();
-
-        otherAllValues.add(decimalNumber);
-        otherAllValues.add(binaryNumber);
-        otherAllValues.add(hexNumber);
-        otherAllValues.add(octalNumber);
-        otherAllValues.add(asciiRepresentation);
-    }
-
-    public List<Object> getAllValuesForObject(){
-        return this.otherAllValues;
-    }
-
-
-    public List<String[]> returnMyNumbers(){
-        return this.allValues;
-    }
-
-
-    public NumberConverter getCopy() {
-        NumberConverter copy = new NumberConverter();
-        copy.setDecimalNumber(this.decimalNumber);
-        // Andere Eigenschaften könnten hier auch kopiert werden, wenn nötig
-        return copy;
-    }
-
-    public void myPrint(){
-        for(int i = 0; i < allValues.size(); i++){
-            for (int j = 0; j < allValues.get(i).length; j++){
-                System.out.println(allValues.get(i)[j]);
-            }
-        }
-    }
 
 
 
@@ -147,8 +123,18 @@ public class NumberConverter {
                 ", hexNumber='" + hexNumber + '\'' +
                 ", octalNumber='" + octalNumber + '\'' +
                 ", asciiRepresentation='" + asciiRepresentation + '\'' +
-                ", allValues=" + allValues.stream().map(Arrays::toString).collect(Collectors.joining(", ")) +
                 '}';
+    }
+
+    public void printHistory() {
+        System.out.println("---- History ----");
+        for (Object[] entry : history) {
+            for (Object value : entry) {
+                System.out.print(value + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println("-----------------");
     }
 
 }
