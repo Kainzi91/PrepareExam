@@ -1,4 +1,4 @@
-ssh-keygen -t ed25519 -C "your_email@example.com" (mail von github)
+ssh-keygen -t ed25519 -C "kainza2@yahoo.de" (mail von github)
 
 3 mal enter
 
